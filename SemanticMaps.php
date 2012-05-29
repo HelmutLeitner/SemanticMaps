@@ -105,6 +105,7 @@ $wgAutoloadClasses['SMGeoCoordsHooks'] 				= $incDir . 'SM_GeoCoordsHooks.php';
 
 // Data values
 $wgAutoloadClasses['SMGeoCoordsValue'] 				= $incDir . 'SM_GeoCoordsValue.php';
+$wgAutoloadClasses['SMGeoPolygonValue'] 			= $incDir . 'SM_GeoPolygonValue.php';
 
 // Value descriptions
 $wgAutoloadClasses['SMGeoCoordsValueDescription'] 	= $incDir . 'SM_GeoCoordsValueDescription.php';

@@ -259,6 +259,7 @@ class SMQueryHandler {
 	 */
 	protected function handleResultRow( array /* of SMWResultArray */ $row ) {
 		$locations = array();
+		$polygons = array();
 		$properties = array();
 
 		$title = '';
@@ -277,9 +278,6 @@ class SMQueryHandler {
 					$title = $dataValue->getLongText( $this->outputmode, null );
 					$text = $dataValue->getLongText( $this->outputmode, smwfGetLinker() );
 				}
-				else if ( $dataValue->getTypeID() != '_geo' && $i != 0 ) {
-					$properties[] = $this->handleResultProperty( $dataValue, $printRequest );
-				}
 				else if ( $printRequest->getMode() == SMWPrintRequest::PRINT_PROP && $printRequest->getTypeID() == '_geo' ) {
 					$dataItem = $dataValue->getDataItem();
 
@@ -289,6 +287,12 @@ class SMQueryHandler {
 						$locations[] = $location;
 					}
 
+				}
+				else if ( $printRequest->getMode() == SMWPrintRequest::PRINT_PROP && $printRequest->getTypeID() == '_gpo' ) {
+					$dataItem = $dataValue->getDataItem();
+				}
+				else if ( ($dataValue->getTypeID() != '_geo' || $dataValue->getTypeID() != '_gpo') && $i != 0 ) {
+					$properties[] = $this->handleResultProperty( $dataValue, $printRequest );
 				}
 			}
 		}

@@ -92,7 +92,7 @@ final class SMFormInputs {
 		
 		//$sfgFormPrinter->registerInputType( 'SMMapInput' );
 		
-		$sfgFormPrinter->setInputTypeHook( $inputName, 'smfSelectFormInputHTML', $field_args );
+		//$sfgFormPrinter->setInputTypeHook( $inputName, 'smfSelectFormInputHTML', $field_args );
 	}
 	
 }

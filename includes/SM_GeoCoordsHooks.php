@@ -76,6 +76,7 @@ final class SMGeoCoordsHooks {
 	 */
 	public static function initGeoCoordsType() {
 		SMWDataValueFactory::registerDatatype( '_geo', 'SMGeoCoordsValue', SMWDataItem::TYPE_GEO );
+		SMWDataValueFactory::registerDatatype( '_gpo', 'SMGeoPolygonValue', SMWDataItem::TYPE_GEOPOL );
 		return true;
 	}
 	
