@@ -7,17 +7,18 @@
  * @ingroup Semantic Maps
  *
  * @licence GNU GPL v2+
- * @author Jeroen De Dauw < jeroendedauw@gmail.com
+ * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 
 $messages = array();
 
 /** English
  * @author Jeroen De Dauw
+ * @author Karsten Hoffmeyer (kghbln)
  */
 $messages['en'] = array(
 	// General
-	'semanticmaps-desc' => "Provides the ability to view and edit coordinate data stored with the Semantic MediaWiki extension ([http://mapping.referata.com/wiki/Examples demos]).",
+	'semanticmaps-desc' => "Provides the ability to view and edit coordinate data stored with the Semantic MediaWiki extension ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps more info...])",
 	'semanticmaps-unrecognizeddistance' => 'The value $1 is not a valid distance.',
 	'semanticmaps-kml-link' => 'View the KML file',
 	'semanticmaps-kml' => 'KML',
@@ -31,26 +32,30 @@ $messages['en'] = array(
 	'semanticmaps-loading-forminput'	=> 'Loading map form input...',
 	'semanticmaps_lookupcoordinates' 	=> 'Look up coordinates',
 	'semanticmaps_enteraddresshere' 	=> 'Enter address here',
-	'semanticmaps-updatemap' 			=> 'Update map',
+	'semanticmaps-updatemap' 		=> 'Update map',
 	'semanticmaps-forminput-remove'		=> 'Remove',
 	'semanticmaps-forminput-add'		=> 'Add',
 	'semanticmaps-forminput-locations'	=> 'Locations',
 	
 	// Parameter descriptions
-	
 	'semanticmaps-par-staticlocations'	=> 'A list of locations to add to the map together with the queried data. Like with display_points, you can add a title, description and icon per location using the tilde "~" as separator.',
 	'semanticmaps-par-forceshow'		=> 'Show the map even when there are no locations to display?',
 	'semanticmaps-par-showtitle'		=> 'Show a title in the marker info window or not. Disabling this is often usefull when using a template to format the info window content.',
-	'semanticmaps-par-hidenamespace'    => 'Show the namespace title in the marker info window or not.',
+	'semanticmaps-par-hidenamespace'	=> 'Show the namespace title in the marker info window',
 	'semanticmaps-par-centre'		=> 'The centre of the map. When not provided, the map will automatically pick the optimal centre to display all markers on the map.',
 	'semanticmaps-par-template'		=> 'A template to use to format the info window contents.',
 	
-	'semanticmaps-par-geocodecontrol'		=> 'Show the geocoding control.',
-	
-	'semanticmaps-kml-text' => 'The text associates with each page. Overriden by the aditional queried properties if any.',
+	'semanticmaps-par-geocodecontrol'	=> 'Show the geocoding control.',
+
+	'semanticmaps-kml-text' => 'The text associated with each page. Overriden by the additional queried properties if any.',
 	'semanticmaps-kml-title' => 'The default title for results',
-	'semanticmaps-kml-linkabsolute' => 'Should links be absolute or not (ie relative)',
+	'semanticmaps-kml-linkabsolute' => 'Should links be absolute (as opposed to relative)',
 	'semanticmaps-kml-pagelinktext' => 'The text to use for the links to the page, in which $1 will be replaced by the page title',
+
+	//Validation Errors
+	'semanticmaps-shapes-improperformat' => 'Improper formatting of $1. Please see documentation for formatting',
+	'semanticmaps-shapes-missingshape' => 'No shapes found for $1. Please see documentation for available shapes',
+
 );
 
 /** Message documentation (Message documentation)
@@ -59,10 +64,11 @@ $messages['en'] = array(
  * @author Lloffiwr
  * @author Purodha
  * @author Raymond
+ * @author Shirayuki
  * @author Umherirrender
  */
 $messages['qqq'] = array(
-	'semanticmaps-desc' => '{{desc}}',
+	'semanticmaps-desc' => '{{desc|name=Semantic Maps|url=http://www.mediawiki.org/wiki/Extension:Semantic_Maps}}',
 	'semanticmaps-kml' => '{{optional}}',
 	'semanticmaps-default-kml-pagelink' => '$1 is probably a page title.',
 	'semanticmaps-loading-forminput' => 'Message displayed during a computer action',
@@ -72,13 +78,15 @@ $messages['qqq'] = array(
 	'semanticmaps-forminput-remove' => '{{Identical|Remove}}',
 	'semanticmaps-forminput-add' => '{{Identical|Add}}',
 	'semanticmaps-forminput-locations' => '{{Identical|Location}}',
+	'semanticmaps-shapes-improperformat' => 'Message displayed when the wikitext formatting of a shape is erroneous',
+	'semanticmaps-shapes-missingshape' => 'Message displayed when there is no such defined shape as $1',
 );
 
 /** Afrikaans (Afrikaans)
  * @author Naudefj
  */
 $messages['af'] = array(
-	'semanticmaps-desc' => 'Bied die vermoë om koördinaatdata met behulp van die Semantiese MediaWiki-uitbreiding te sien en te wysig ([http://mapping.referata.com/wiki/Examples demo]).',
+	'semanticmaps-desc' => 'Bied die vermoë om koördinaatdata met behulp van die Semantiese MediaWiki-uitbreiding te sien en te wysig ([https://mapping.referata.com/wiki/Examples demo]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Die waarde "$1" is nie \'n geldige afstand nie.',
 	'semanticmaps_lookupcoordinates' => 'Soek koördinate op',
 	'semanticmaps_enteraddresshere' => 'Voer adres hier in',
@@ -89,7 +97,7 @@ $messages['af'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
-	'semanticmaps-desc' => 'يقدم إمكانية عرض وتعديل بيانات التنسيق التي خزنها امتداد سيمانتيك ميدياويكي ([http://mapping.referata.com/wiki/Examples تجربة]).',
+	'semanticmaps-desc' => 'يقدم إمكانية عرض وتعديل بيانات التنسيق التي خزنها امتداد سيمانتيك ميدياويكي ([https://mapping.referata.com/wiki/Examples تجربة]).', # Fuzzy
 	'semanticmaps-kml' => 'كيه إم إل',
 	'semanticmaps_lookupcoordinates' => 'ابحث عن الإحداثيات',
 	'semanticmaps_enteraddresshere' => 'أدخل العنوان هنا',
@@ -110,7 +118,7 @@ $messages['arz'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
-	'semanticmaps-desc' => 'Ufre la capacidá de ver y editar los datos de coordenaes guardaos cola estensión Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples exemplos]).',
+	'semanticmaps-desc' => 'Ufre la capacidá de ver y editar los datos de coordenaes guardaos cola estensión Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps más información...]).',
 	'semanticmaps-unrecognizeddistance' => 'El valor $1 nun ye una distancia válida.',
 	'semanticmaps-kml-link' => 'Ver el ficheru KML',
 	'semanticmaps-default-kml-pagelink' => 'Ver la páxina "$1"',
@@ -135,6 +143,8 @@ $messages['ast'] = array(
 	'semanticmaps-kml-title' => 'El títulu predetermináu pa los resultaos',
 	'semanticmaps-kml-linkabsolute' => 'Si los títulos tienen de ser absolutos o non (esto ye, relativos)',
 	'semanticmaps-kml-pagelinktext' => 'El testu a usar pa los enllaces a la páxina, onde "$1" se sustituye pol títulu de la páxina',
+	'semanticmaps-shapes-improperformat' => 'Formatu incorreutu de $1. Por favor, consulta la documentación sobre formatos',
+	'semanticmaps-shapes-missingshape' => "Nun s'alcontraron formes pa $1. Por favor, consulta la documentación de les formes disponibles",
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -150,7 +160,7 @@ $messages['az'] = array(
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
-	'semanticmaps-desc' => 'Забясьпечвае магчымасьць прагляду і рэдагаваньня зьвестак пра каардынаты, якія захоўваюцца з дапамогай пашырэньня Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples дэманстрацыя]).',
+	'semanticmaps-desc' => 'Забясьпечвае магчымасьць прагляду і рэдагаваньня зьвестак пра каардынаты, якія захоўваюцца з дапамогай пашырэньня Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples дэманстрацыя]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Значэньне $1 — няслушная адлегласьць.',
 	'semanticmaps-kml-link' => 'Паказаць KML-файл',
 	'semanticmaps-default-kml-pagelink' => 'Паказаць старонку $1',
@@ -196,7 +206,7 @@ $messages['bn'] = array(
  * @author Y-M D
  */
 $messages['br'] = array(
-	'semanticmaps-desc' => 'Talvezout a ra da welet ha da gemmañ roadennoù daveennoù stoket dre an astenn Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demo]).',
+	'semanticmaps-desc' => 'Talvezout a ra da welet ha da gemmañ roadennoù daveennoù stoket dre an astenn Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples demo]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => "An talvoud $1 n'eo ket un hed reizh anezhañ.",
 	'semanticmaps-kml-link' => 'Gwelet ar restr KML',
 	'semanticmaps-default-kml-pagelink' => 'Gwelet ar pennad $1',
@@ -219,7 +229,7 @@ $messages['br'] = array(
  * @author Palapa
  */
 $messages['bs'] = array(
-	'semanticmaps-desc' => 'Daje mogućnost pregleda i uređivanja podataka koordinata koji su spremljeni putem Semantic MediaWiki proširenja ([http://mapping.referata.com/wiki/Examples primjeri]).',
+	'semanticmaps-desc' => 'Daje mogućnost pregleda i uređivanja podataka koordinata koji su spremljeni putem Semantic MediaWiki proširenja ([https://mapping.referata.com/wiki/Examples primjeri]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Vrijednost $1 nije ispravno odstojanje.',
 	'semanticmaps-kml-link' => 'Pogledajte KML datoteku',
 	'semanticmaps-default-kml-pagelink' => 'Pogledajte stranicu $1',
@@ -240,10 +250,13 @@ $messages['bs'] = array(
  * @author Toniher
  */
 $messages['ca'] = array(
-	'semanticmaps-desc' => "Ofereix l'habilitat de visualitzar i editar dades de coordenades emmagatzemades a través de l'extensió Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples alguns exemples]).",
+	'semanticmaps-desc' => "Ofereix l'habilitat de visualitzar i editar dades de coordenades emmagatzemades a través de l'extensió Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps més informació...]).",
 	'semanticmaps-unrecognizeddistance' => 'El valor $1 no és un valor de distància.',
 	'semanticmaps-kml-link' => 'Visualitza el fitxer KML',
 	'semanticmaps-default-kml-pagelink' => 'Visualitza la pàgina $1',
+	'semanticmaps-latitude' => 'Latitud: $1',
+	'semanticmaps-longitude' => 'Longitud: $1',
+	'semanticmaps-altitude' => 'Altitud: $1',
 	'semanticmaps-loading-forminput' => "Carregant formulari d'entrada del mapa...",
 	'semanticmaps_lookupcoordinates' => 'Consulta les coordenades',
 	'semanticmaps_enteraddresshere' => 'Introduïu una adreça a continuació',
@@ -264,7 +277,7 @@ $messages['ca'] = array(
  * @author XenoPheX
  */
 $messages['cs'] = array(
-	'semanticmaps-desc' => 'Poskytuje možnost zobrazit a upravovat data souřadnic uložená rozšířením Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demos]).',
+	'semanticmaps-desc' => 'Poskytuje možnost zobrazit a upravovat data souřadnic uložená rozšířením Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples demos]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Hodnota  $1  není platná vzdálenost.',
 	'semanticmaps-kml-link' => 'Zobrazit soubor KML',
 	'semanticmaps-default-kml-pagelink' => 'Zobrazit stránku $1',
@@ -311,12 +324,13 @@ $messages['cy'] = array(
  * @author DaSch
  * @author Imre
  * @author Kghbln
+ * @author Metalhead64
  * @author Pill
  * @author The Evil IP address
  * @author Umherirrender
  */
 $messages['de'] = array(
-	'semanticmaps-desc' => 'Ermöglicht das Anzeigen und Bearbeiten von Daten zu Koordinaten, die mit Semantic MediaWiki gespeichert werden ([http://mapping.referata.com/wiki/Examples Demonstrationsseite])',
+	'semanticmaps-desc' => 'Ermöglicht das Anzeigen und Bearbeiten von Daten zu Koordinaten, die mit Semantic MediaWiki gespeichert werden ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps Weitere Informationen …]).',
 	'semanticmaps-unrecognizeddistance' => 'Der Wert $1 ist keine gültige Distanz.',
 	'semanticmaps-kml-link' => 'KML-Datei ansehen',
 	'semanticmaps-kml' => 'Export (KML)',
@@ -332,23 +346,25 @@ $messages['de'] = array(
 	'semanticmaps-forminput-add' => 'Hinzufügen',
 	'semanticmaps-forminput-locations' => 'Standort',
 	'semanticmaps-par-staticlocations' => 'Die Listen von Standorten, die zusammen mit den abgefragten Daten, der Karte hinzugefügt werden sollen. Analog zu den Anzeigepunkten können je Standort Titel, Beschreibung und Symbol, unter Verwendung einer Tilde „~“ als Trennzeichen, hinzugefügt werden.',
-	'semanticmaps-par-forceshow' => 'Die Karte auch dann anzeigen, wenn es keine Standorte zum Anzeigen gibt?',
+	'semanticmaps-par-forceshow' => 'Die Karte auch dann anzeigen, wenn es keine anzuzeigenden Standorte gibt',
 	'semanticmaps-par-showtitle' => 'Den Titel im Informationsfenster der Kennzeichnung anzeigen oder nicht. Diese Option zu deaktivieren ist oftmals dann nützlich, sofern eine Vorlage zur Formatierung des Informationsfensterinhalts verwendet wird.',
-	'semanticmaps-par-hidenamespace' => 'Den Namen des Namensraums im Informationsfenster der Kennzeichnung anzeigen oder nicht.',
+	'semanticmaps-par-hidenamespace' => 'Den Namen des Namensraums im Informationsfenster der Kennzeichnung anzeigen',
 	'semanticmaps-par-centre' => 'Das Zentrum der Karte. Sofern nicht angegeben wird automatisch das optimale Zentrum zur Darstellung aller Kennzeichnungen auf der Karte gewählt.',
 	'semanticmaps-par-template' => 'Die zur Formatierung des Informationsfensterinhalts zu verwendende Vorlage.',
 	'semanticmaps-par-geocodecontrol' => 'Die Steuerungsseite zum Geokodieren anzeigen.',
 	'semanticmaps-kml-text' => 'Der Text, der zu jeder Seite angezeigt wird. Wird im Fall zusätzlich abgefragter Attribute ersetzt.',
 	'semanticmaps-kml-title' => 'Der Standardtitel für die Ergebnisse',
-	'semanticmaps-kml-linkabsolute' => 'Die Links sollen absolut sein oder nicht (nämlich relativ)',
+	'semanticmaps-kml-linkabsolute' => 'Die Links sollen absolut sein (anstatt relativ)',
 	'semanticmaps-kml-pagelinktext' => 'Der Text, der für die Links zur Seite genutzt werden soll. $1 wird dabei durch den Namen der Seite ersetzt.',
+	'semanticmaps-shapes-improperformat' => '$1 ist falsch formatiert. Siehe hierzu die Dokumentation bezüglich Formatierungen.',
+	'semanticmaps-shapes-missingshape' => 'Für $1 wurden keine Formen gefunden. Siehe hierzu die Dokumentation bezüglich verfügbarer Formen.',
 );
 
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
-	'semanticmaps-desc' => 'Bitujo zmóžnosć se koordinatowe daty pśez rozšyrjenje Semantic MediaWiki woglědaś a wobźěłaś ([http://mapping.referata.com/wiki/Examples pśikłady]).',
+	'semanticmaps-desc' => 'Bitujo zmóžnosć se koordinatowe daty pśez rozšyrjenje Semantic MediaWiki woglědaś a wobźěłaś ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps dalšne informacije...]).',
 	'semanticmaps-unrecognizeddistance' => 'Gódnota $1 njejo płaśiwa distanca.',
 	'semanticmaps-kml-link' => 'KML-dataju se woglědaś',
 	'semanticmaps-default-kml-pagelink' => 'Bok $1 se woglědaś',
@@ -381,7 +397,7 @@ $messages['eo'] = array(
  * @author Translationista
  */
 $messages['es'] = array(
-	'semanticmaps-desc' => 'Proporciona la posibilidad de ver y editar datos de coordenadas almacenados con la extensión Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demos]).',
+	'semanticmaps-desc' => 'Proporciona la posibilidad de ver y editar datos de coordenadas almacenados con la extensión Semantic MediaWiki (Más información.).',
 	'semanticmaps-unrecognizeddistance' => 'El valor $1 no es una distancia válida.',
 	'semanticmaps-kml-link' => 'Ver el archivo KML',
 	'semanticmaps-default-kml-pagelink' => 'Ver página $1',
@@ -398,14 +414,16 @@ $messages['es'] = array(
 	'semanticmaps-par-staticlocations' => 'Una lista de localizaciones para añadir al mapa junto a los datos consultados. De forma similar a display_points, puede añadir un título, una descripción o un icono por localización usando el signo "~" como separador.',
 	'semanticmaps-par-forceshow' => '¿Mostrar el mapa incluso cuando no hay ubicaciones que mostrar?',
 	'semanticmaps-par-showtitle' => 'Mostrar o no mostrar un título en la ventana de información del marcador. La desactivación de esto es frecuentemente útil al utilizar una plantilla para dar formato al contenido de la ventana de información.',
-	'semanticmaps-par-hidenamespace' => 'Mostrar o no mostrar el título del espacio de nombres en la ventana de información del marcador.',
+	'semanticmaps-par-hidenamespace' => 'Mostrar el título del espacio de nombres en la ventana de información del marcador.',
 	'semanticmaps-par-centre' => 'El centro del mapa. Cuando no se proporciona, el mapa escogerá automáticamente el mejor centro para mostrar todos los marcadores en el mapa.',
 	'semanticmaps-par-template' => 'Una plantilla a usar para dar formato al contenido de la ventana de información.',
 	'semanticmaps-par-geocodecontrol' => 'Mostrar el control de geocodificación.',
 	'semanticmaps-kml-text' => 'El texto asociado a cada página. Es substituído por las propiedades recuperadas adicionales, si existen.',
 	'semanticmaps-kml-title' => 'El título por defecto para los resultados',
-	'semanticmaps-kml-linkabsolute' => 'Los títulos deberían ser absolutos o no (es decir, relativos)',
+	'semanticmaps-kml-linkabsolute' => 'Los enlaces deberían ser absolutos (lo opuesto de relativos)',
 	'semanticmaps-kml-pagelinktext' => 'El texto a usar para los enlaces a la página, en las que $1 será substituído por el título de la página',
+	'semanticmaps-shapes-improperformat' => 'Formateo incorrecto de $1, por favor consulta la documentación sobre formateo',
+	'semanticmaps-shapes-missingshape' => 'No se ha encontrado ninguna forma para $1, por favor consulta la documentación sobre formas disponibles',
 );
 
 /** Estonian (eesti)
@@ -438,13 +456,37 @@ $messages['fa'] = array(
 /** Finnish (suomi)
  * @author Beluga
  * @author Crt
+ * @author Nedergard
  * @author Str4nd
  */
 $messages['fi'] = array(
+	'semanticmaps-desc' => 'Mahdollistaa Semantic MediaWiki -laajennuksen avulla tallennettujen koordinaattitietojen näyttämisen ja muokkaamisen ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps lisätietoja]).',
+	'semanticmaps-unrecognizeddistance' => 'Arvoa  $1  ei ole sallittu etäisyys.',
+	'semanticmaps-kml-link' => 'Näytä KLM-tiedosto',
+	'semanticmaps-default-kml-pagelink' => 'Näytä sivu $1',
+	'semanticmaps-latitude' => 'Leveyspiiri: $1',
+	'semanticmaps-longitude' => 'Pituuspiiri: $1',
+	'semanticmaps-altitude' => 'Korkeus: $1',
+	'semanticmaps-loading-forminput' => 'Ladataan kartan lomaketietoja...',
+	'semanticmaps_lookupcoordinates' => 'Hae koordinaatit',
 	'semanticmaps_enteraddresshere' => 'Kirjoita osoite tähän',
+	'semanticmaps-updatemap' => 'Päivitä kartta',
 	'semanticmaps-forminput-remove' => 'Poista',
 	'semanticmaps-forminput-add' => 'Lisää',
 	'semanticmaps-forminput-locations' => 'Sijainnit',
+	'semanticmaps-par-staticlocations' => 'Sijaintien luettelo voidaan lisätä karttaan kyselydatan lisäksi. Kuten display_points-parametrissa voit lisätä sijaintikohtaisen otsikon, kuvauksen ja kuvakkeen; erottimena on "~".',
+	'semanticmaps-par-forceshow' => 'Näytetäänkö kartta, jos näytettäviä sijainteja ei ole?',
+	'semanticmaps-par-showtitle' => 'Näyttää kohdemerkin tietoikkunan otsikon tai ei. Käytöstä poisto on usein hyödyllistä, jos tietoikkunan sisältö muotoillaan mallineella.',
+	'semanticmaps-par-hidenamespace' => 'Näytä nimiavaruuden otsikko kohdemerkin tietoikkunassa',
+	'semanticmaps-par-centre' => 'Kartan keskus. Jos sitä ei määritetä, kartta laskee automaattisesti optimaalisen keskuksen kartalla olevien kohdemerkkien perusteella.',
+	'semanticmaps-par-template' => 'Tietoikkunan sisällön muotoilussa käytettävä malline.',
+	'semanticmaps-par-geocodecontrol' => 'Näytä geokoodausohjaimet.',
+	'semanticmaps-kml-text' => 'Kuhunkin sivuun liittyvä teksti. Jos kyselyllä on lisäominaisuuksia, ne syrjäyttävät tämän.',
+	'semanticmaps-kml-title' => 'Tulossivun oletusotsikko',
+	'semanticmaps-kml-linkabsolute' => 'Ovatko linkit absoluuttisia (eivätkä suhteellisia)',
+	'semanticmaps-kml-pagelinktext' => 'Sivulinkeissä käytettävä teksti, jossa $1 korvataan sivun otsikolla',
+	'semanticmaps-shapes-improperformat' => '$1 on muotoiltu väärin. Katso muotoilun dokumentaatiota.',
+	'semanticmaps-shapes-missingshape' => '$1: muotoja ei löytynyt. Dokumentaatiossa kerrotaan sallituista muodoista.',
 );
 
 /** French (français)
@@ -461,7 +503,7 @@ $messages['fi'] = array(
  * @author Wyz
  */
 $messages['fr'] = array(
-	'semanticmaps-desc' => "Permet d'afficher et de modifier les données de coordonnées stockées par l'extension Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demo]).",
+	'semanticmaps-desc' => "Permet d'afficher et de modifier les données de coordonnées stockées par l'extension Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps more info...]).",
 	'semanticmaps-unrecognizeddistance' => "La valeur $1 n'est pas une distance valide",
 	'semanticmaps-kml-link' => 'Voir le fichier KML',
 	'semanticmaps-default-kml-pagelink' => 'Voir l’article $1',
@@ -486,6 +528,8 @@ $messages['fr'] = array(
 	'semanticmaps-kml-title' => 'Le titre par défaut pour les résultats',
 	'semanticmaps-kml-linkabsolute' => 'Si les titres doivent être absolus ou non (c.à.d. relatifs)',
 	'semanticmaps-kml-pagelinktext' => 'Le texte à utiliser pour les liens vers la page, dans lesquels $1 sera remplacé par le titre de la page',
+	'semanticmaps-shapes-improperformat' => 'Format de $1 incorrect, veuillez vous reporter à la documentation pour le format attendu',
+	'semanticmaps-shapes-missingshape' => 'Aucune forme trouvée pour $1; veuillez voir dans la documentation les formes disponibles',
 );
 
 /** Franco-Provençal (arpetan)
@@ -511,7 +555,7 @@ $messages['frp'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'semanticmaps-desc' => 'Proporciona a capacidade de ollar e modificar os datos de coordenadas gardados a través da extensión Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demostración]).',
+	'semanticmaps-desc' => 'Proporciona a capacidade de ollar e modificar os datos de coordenadas gardados a través da extensión Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps máis información...]).',
 	'semanticmaps-unrecognizeddistance' => 'O valor $1 non é unha distancia válida.',
 	'semanticmaps-kml-link' => 'Ollar o ficheiro KML',
 	'semanticmaps-default-kml-pagelink' => 'Ver a páxina "$1"',
@@ -528,14 +572,16 @@ $messages['gl'] = array(
 	'semanticmaps-par-staticlocations' => 'Unha lista de localizacións para engadir ao mapa xunto aos datos consultados. Como con display_points, pode engadir un título, unha descrición e mais unha icona por localización mediante o signo "~" como separador.',
 	'semanticmaps-par-forceshow' => 'Quere mostrar o mapa, mesmo cando non haxa localizacións que presentar?',
 	'semanticmaps-par-showtitle' => 'Mostrar ou non un título na ventá de información do marcador. Frecuentemente, desactivar isto é útil ao utilizar un modelo para dar formato ao contido da ventá de información.',
-	'semanticmaps-par-hidenamespace' => 'Mostrar ou non o título do espazo de nomes na ventá de información do marcador.',
+	'semanticmaps-par-hidenamespace' => 'Mostrar o título do espazo de nomes na ventá de información do marcador',
 	'semanticmaps-par-centre' => 'O centro do mapa. Cando non se proporciona, o mapa ha escoller automaticamente o mellor centro para mostrar todos os marcadores no mapa.',
 	'semanticmaps-par-template' => 'Un modelo a empregar para dar formato ao contido da ventá de información.',
 	'semanticmaps-par-geocodecontrol' => 'Mostrar o control de xeocodificación.',
 	'semanticmaps-kml-text' => 'O texto asociado a cada páxina. Substituído polas propiedades pescudadas adicionais, se existen.',
 	'semanticmaps-kml-title' => 'O título por defecto para os resultados',
-	'semanticmaps-kml-linkabsolute' => 'Se os títulos deberían ser absolutos ou non (por exemplo, relativos)',
+	'semanticmaps-kml-linkabsolute' => 'Se as ligazóns deberían ser absolutas (contrario a relativas)',
 	'semanticmaps-kml-pagelinktext' => 'O texto a usar para as ligazóns cara á páxina, nas que "$1" será substituído polo título da páxina',
+	'semanticmaps-shapes-improperformat' => 'Formato incorrecto de "$1"; consulte a documentación sobre os formatos',
+	'semanticmaps-shapes-missingshape' => 'Non se atopou forma ningunha para "$1"; consulte a documentación sobre as formas dispoñibles',
 );
 
 /** Swiss German (Alemannisch)
@@ -543,7 +589,7 @@ $messages['gl'] = array(
  * @author Als-Holder
  */
 $messages['gsw'] = array(
-	'semanticmaps-desc' => 'Ergänzt e Megligkeit zum Aaluege un Bearbeite vu Koordinate, wu im Ramme vu dr Erwyterig „Semantisch MediaWiki“ gspycheret wore sin. [http://www.mediawiki.org/wiki/Extension:Semantic_Maps Dokumäntation]. [http://mapping.referata.com/wiki/Examples Demo]',
+	'semanticmaps-desc' => 'Ergänzt e Megligkeit zum Aaluege un Bearbeite vu Koordinate, wu im Ramme vu dr Erwyterig „Semantisch MediaWiki“ gspycheret wore sin. [https://www.mediawiki.org/wiki/Extension:Semantic_Maps Dokumäntation]. [https://mapping.referata.com/wiki/Examples Demo]', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Dr Wert $1 isch kei giltigi Dischtanz.',
 	'semanticmaps-kml-link' => 'KML-Datei aaluege',
 	'semanticmaps-default-kml-pagelink' => 'Syte $1 aaluege',
@@ -568,7 +614,7 @@ $messages['gsw'] = array(
  * @author YaronSh
  */
 $messages['he'] = array(
-	'semanticmaps-desc' => 'הוספת האפשרות לצפייה בנתוני הקואורדינטות המאוחסנים ולעריכתם באמצעות ההרחבה מדיה־ויקי סמנטית ([http://mapping.referata.com/wiki/Examples הדגמות]).',
+	'semanticmaps-desc' => 'הוספת האפשרות לצפייה בנתוני הקואורדינטות המאוחסנים ולעריכתם באמצעות ההרחבה מדיה־ויקי סמנטית ([https://mapping.referata.com/wiki/Examples הדגמות]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'הערך $1 אינו מרחק תקין.',
 	'semanticmaps-kml-link' => 'הצגת קובץ KML',
 	'semanticmaps-default-kml-pagelink' => 'הצגת הדף $1',
@@ -585,13 +631,13 @@ $messages['he'] = array(
 	'semanticmaps-par-staticlocations' => 'רשימת מיקומים להוסיף למפה יחד עם הנתונים המבוקשים בשאילתה. כמו עם display_points, אפשר להוסיף כאן כותרת, תיאור וסמל לכל מיקום עם טילדה (~) בתור תו מפריד.',
 	'semanticmaps-par-forceshow' => 'להציג מפה גם כשאין מיקומים להצגה?',
 	'semanticmaps-par-showtitle' => 'להציג את הכותרת בחלון המידע על הסמן או לא. הכיבוי של זה שימושי לעתים קרובות כאשר נעשה שימוש בתבנית לעיצוב חלון המידע.',
-	'semanticmaps-par-hidenamespace' => 'האם להציג או לא להציג את שם המרחב בחלון המידע על סמן.',
+	'semanticmaps-par-hidenamespace' => 'האם להציג את שם המרחב בחלון המידע על סמן.',
 	'semanticmaps-par-centre' => 'מרכז המפה. אם לא ניתן, המפה תבחר בעצמה את המרכז המיטבי להצגת כל הסמנים על המפה.',
 	'semanticmaps-par-template' => 'תבנית לעיצוב תוכן חלון המידע.',
 	'semanticmaps-par-geocodecontrol' => 'הצגת בקר קידוד גאוגרפי.',
 	'semanticmaps-kml-text' => 'הטקסט משויך לכל עמוד ועמוד. נדרס במאפיינים אחרים שנעשית עליהם שאילתה, אם יש כאלה.',
 	'semanticmaps-kml-title' => 'כותרת לתוצאות לפי בררת המחדל.',
-	'semanticmaps-kml-linkabsolute' => 'האם הקישורים צריכים להיות מוחלטים או יחסיים',
+	'semanticmaps-kml-linkabsolute' => 'האם הקישורים צריכים להיות מוחלטים (או יחסיים)',
 	'semanticmaps-kml-pagelinktext' => 'הטקסט שישמש לקישורים לדף, כאשר $1 יוחלף בכותרת הדף',
 );
 
@@ -599,7 +645,7 @@ $messages['he'] = array(
  * @author Tivek
  */
 $messages['hr'] = array(
-	'semanticmaps-desc' => "Pruža pregledavanje i uređivanje koordinata spremljenih koristeći Semantic MediaWiki ekstenziju ([http://mapping.referata.com/wiki/Examples demo's]).",
+	'semanticmaps-desc' => "Pruža pregledavanje i uređivanje koordinata spremljenih koristeći Semantic MediaWiki ekstenziju ([https://mapping.referata.com/wiki/Examples demo's]).", # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Vrijednost $1 nije valjana udaljenost.',
 	'semanticmaps_lookupcoordinates' => 'Potraži koordinate',
 	'semanticmaps_enteraddresshere' => 'Unesite adresu ovdje',
@@ -609,7 +655,7 @@ $messages['hr'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
-	'semanticmaps-desc' => 'Zmóžnja zwobraznjenje a wobdźěłanje koordinatowych datow, kotrež su so z rozšěrjenjom Semantic MediaWiki składowali ([http://mapping.referata.com/wiki/Examples přikłady]).',
+	'semanticmaps-desc' => 'Zmóžnja zwobraznjenje a wobdźěłanje koordinatowych datow, kotrež su so z rozšěrjenjom Semantic MediaWiki składowali ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps dalše informacije...]).',
 	'semanticmaps-unrecognizeddistance' => 'Hódnota $1 płaćiwa distanca njeje.',
 	'semanticmaps-kml-link' => 'KML-dataju sej wobhladać',
 	'semanticmaps-default-kml-pagelink' => 'Nastawk $1 sej wobhladać',
@@ -634,6 +680,8 @@ $messages['hsb'] = array(
 	'semanticmaps-kml-title' => 'Standardny titul za wuslědki',
 	'semanticmaps-kml-linkabsolute' => 'Hač wotkazy maja absolutne być abo nic (t.r. relatiwne)',
 	'semanticmaps-kml-pagelinktext' => 'Tekst, kotryž ma so za wotkazy k tej stronje wužiwać, w kotrejž $1 so přez titul strony naruna',
+	'semanticmaps-shapes-improperformat' => '$1 je so wopak formatował. Prošu hlej dokumentaciju za formatowanje',
+	'semanticmaps-shapes-missingshape' => 'Žane formy njejsu za $1 namakałi. Prošu hlej dokumentaciju za k dispoziciji stejace formy.',
 );
 
 /** Hungarian (magyar)
@@ -642,7 +690,7 @@ $messages['hsb'] = array(
  * @author TK-999
  */
 $messages['hu'] = array(
-	'semanticmaps-desc' => 'Lehetővé teszi a szemantikus MediaWiki kiterjesztéssel tárolt koordinátaadatok megtekintését és szerkesztését ([http://mapping.referata.com/wiki/Examples bemutató]).',
+	'semanticmaps-desc' => 'Lehetővé teszi a szemantikus MediaWiki kiterjesztéssel tárolt koordinátaadatok megtekintését és szerkesztését ([https://mapping.referata.com/wiki/Examples bemutató]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'A(z) $1 érték nem egy érvényes távolság.',
 	'semanticmaps-kml-link' => 'KML fájl megtekintése',
 	'semanticmaps-default-kml-pagelink' => 'A(z) $1 lap megtekintése',
@@ -665,7 +713,7 @@ $messages['hu'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
-	'semanticmaps-desc' => 'Forni le capacitate de vider e modificar datos de coordinatas immagazinate con le extension Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demonstrationes]).',
+	'semanticmaps-desc' => 'Forni le capacitate de vider e modificar datos de coordinatas immagazinate con le extension Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples demonstrationes]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Le valor $1 non es un distantia valide.',
 	'semanticmaps-kml-link' => 'Vider le file KML',
 	'semanticmaps-default-kml-pagelink' => 'Vider articulo $1',
@@ -699,7 +747,7 @@ $messages['ia'] = array(
  */
 $messages['id'] = array(
 	'semanticmaps-desc' => 'Memberikan kemampuan untuk melihat dan menyunting data koordinat yang disimpan melalui pengaya MediaWiki Semantic
-([http://mapping.referata.com/wiki/Examples demo]).',
+([https://mapping.referata.com/wiki/Examples demo]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Nilai $1 bukan jarak yang sah.',
 	'semanticmaps-kml-link' => 'Lihat berkas KML',
 	'semanticmaps-default-kml-pagelink' => 'Lihat halaman $1',
@@ -724,7 +772,7 @@ $messages['id'] = array(
  * @author HalphaZ
  */
 $messages['it'] = array(
-	'semanticmaps-desc' => "Fornisce la possibilità di visualizzare e modificare le coordinate memorizzate con l'estensione Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demo]).",
+	'semanticmaps-desc' => "Fornisce la possibilità di visualizzare e modificare le coordinate memorizzate con l'estensione Semantic MediaWiki  ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps ulteriori informazioni]).",
 	'semanticmaps-unrecognizeddistance' => 'Il valore $1 non è una distanza valida.',
 	'semanticmaps-kml-link' => 'Visualizza il file KML',
 	'semanticmaps-default-kml-pagelink' => 'Visualizza la pagina $1',
@@ -759,7 +807,7 @@ $messages['it'] = array(
  * @author 青子守歌
  */
 $messages['ja'] = array(
-	'semanticmaps-desc' => 'Semantic MediaWiki 拡張機能で格納された座標データを表示・編集する機能を提供する（[http://mapping.referata.com/wiki/Examples デモ]）',
+	'semanticmaps-desc' => 'Semantic MediaWiki 拡張機能で格納された座標データを表示・編集する機能を提供する ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps 詳細情報...])',
 	'semanticmaps-unrecognizeddistance' => '値$1は有効な距離ではありません。',
 	'semanticmaps-kml-link' => 'KMLファイルを閲覧',
 	'semanticmaps-default-kml-pagelink' => 'ページ$1を表示',
@@ -770,18 +818,22 @@ $messages['ja'] = array(
 	'semanticmaps_lookupcoordinates' => '座標を検索',
 	'semanticmaps_enteraddresshere' => '住所をここに入力',
 	'semanticmaps-updatemap' => '地図を更新',
-	'semanticmaps-forminput-remove' => '削除',
+	'semanticmaps-forminput-remove' => '除去',
 	'semanticmaps-forminput-add' => '追加',
 	'semanticmaps-forminput-locations' => '場所',
 	'semanticmaps-par-staticlocations' => '問い合わせたデータと共に地図に追加する場所の列挙です。display_points と同様に、区切り文字としてチルダ "~" を使用して、場所ごとにタイトル、説明、アイコンを追加できます。',
 	'semanticmaps-par-forceshow' => '表示する場所がない場合でも、地図を表示しますか？',
 	'semanticmaps-par-showtitle' => 'マーカーの情報ウィンドウのタイトルを表示するかどうか。情報ウィンドウのコンテンツをフォーマットするためにテンプレートを使用するとき、これを無効にすると便利です。',
-	'semanticmaps-par-hidenamespace' => 'マーカー情報ウィンドウに名前空間名を表示するかどうかです。',
+	'semanticmaps-par-hidenamespace' => 'マーカー情報ウィンドウに名前空間名を表示する',
 	'semanticmaps-par-centre' => '地図の中心。提供されていないときは、自動的に地図上のすべてのマーカーを表示するための最適な中心が選択されます。',
 	'semanticmaps-par-template' => '情報ウィンドウのコンテンツの整形に使用するテンプレートです。',
 	'semanticmaps-par-geocodecontrol' => 'ジオコーディングコントロールを表示します。',
+	'semanticmaps-kml-text' => '各ページに関連付けられたテキストです。クエリに追加的なプロパティがある場合は上書きされます。',
 	'semanticmaps-kml-title' => '結果の既定のタイトル',
+	'semanticmaps-kml-linkabsolute' => 'リンクは絶対表記 (= 相対表記の対義語) にしてください。',
 	'semanticmaps-kml-pagelinktext' => 'ページへのリンクに使用するテキスト ($1 はページ名に置換される)',
+	'semanticmaps-shapes-improperformat' => '$1 を不適切な形式に整形しようとしました。整形のドキュメントを参照してください。',
+	'semanticmaps-shapes-missingshape' => '$1 の図形が見つかりません。利用できる図形についてドキュメントを参照してください。',
 );
 
 /** Georgian (ქართული)
@@ -811,10 +863,14 @@ $messages['km'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'semanticmaps-desc' => 'Määt et müjjelesch, Koodinaate ze beloore un ze ändere, di mem „Semantesch Mediawiki“ faßjehallde woode sin. ([http://mapping.referata.com/wiki/Examples Beijshpöll för et vörzemaache])',
+	'semanticmaps-desc' => 'Määt et müjjelesch, Koodinaate ze beloore un ze ändere, di mem „Semantesch Mediawiki“ faßjehallde woode sin. ([https://mapping.referata.com/wiki/Examples Beijshpöll för et vörzemaache])', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Dä Wäät „$1“ es keine jölteje Afschtand.',
 	'semanticmaps-kml-link' => 'De KML-Dattei belooere',
+	'semanticmaps-kml' => 'Äxpoot als KML',
 	'semanticmaps-default-kml-pagelink' => 'De Sigg „$1“ belooere',
+	'semanticmaps-latitude' => 'Dä Breedejrad om Jloobos: $1',
+	'semanticmaps-longitude' => 'Dä Längejraad om Jloobos: $1',
+	'semanticmaps-altitude' => 'De Hühde: $1',
 	'semanticmaps-loading-forminput' => 'Mer sin de Enjaabe vum Fommulaa for die Kaat aam laade&nbsp;…',
 	'semanticmaps_lookupcoordinates' => 'Koordinate nohkike',
 	'semanticmaps_enteraddresshere' => 'Donn hee de Address enjäve',
@@ -826,9 +882,14 @@ $messages['ksh'] = array(
 för jeede Plaz aanjävve, med enem Schlängelsche (~) doh zwesche.',
 	'semanticmaps-par-forceshow' => 'Donn de Kaat aanzeije, selvs wann kein Pläz drop ze zeije sin?',
 	'semanticmaps-par-showtitle' => 'Donn en Övverschreff en däm Finster met Infomazjuhne övver de Makeerong aanzeije udder nit. De Övverschreff afzeschallde es öff joot, wam_mer en Schabloon nemmp för dä Enhallt vum Finster zerääsch ze possumenteere.',
+	'semanticmaps-par-hidenamespace' => 'Zeisch dä Name vum Appachtemang em  marker info Finster udder nit.',
 	'semanticmaps-par-centre' => 'Der Meddelpunk vun dä Kaat. Wann keine aanjejovve_n_es jeiht dä automattesch op der optesche Meddelpunk vun all dä Makeerunge en dä Kaat.',
 	'semanticmaps-par-template' => 'En Schabloon för der Enhalt vum Finster met de Enfommazjuhne ze jeschtallte',
 	'semanticmaps-par-geocodecontrol' => "Donn dat Bedeenelemänt aanzeije för de Ko'odinaate op de Ääd ze beärbeide",
+	'semanticmaps-kml-text' => 'Dä Täx, dä met jeder Sigg aanjezeisch weed. Wann extra Eijeschaffte afjefroocht wääde, kumme di schtatt däm Täx.',
+	'semanticmaps-kml-title' => 'Dä Schtandatttittel för wad eruß küt.',
+	'semanticmaps-kml-linkabsolute' => 'Sulle Lenks absoluud udder relatief sin?',
+	'semanticmaps-kml-pagelinktext' => 'Ene Täx, dä för Lenks op di Sigg jebuch weed. $1 schteiht dobei för dä Sigg iere Tittel.',
 );
 
 /** Kurdish (Latin script) (Kurdî (latînî)‎)
@@ -861,7 +922,7 @@ $messages['lb'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'semanticmaps-desc' => 'Овозможува прегледување и уредување на координатни податоци складирани со додатокот Семантички МедијаВики ([http://mapping.referata.com/wiki/Examples урнеци]).',
+	'semanticmaps-desc' => 'Овозможува прегледување и уредување на координатни податоци складирани со додатокот Семантички МедијаВики ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps?uselang=mk повеќе информации...]).',
 	'semanticmaps-unrecognizeddistance' => 'Вредноста $1 не претставува важечко растојание.',
 	'semanticmaps-kml-link' => 'Преглед на KML-податотеката',
 	'semanticmaps-default-kml-pagelink' => 'Преглед на статијата $1',
@@ -886,6 +947,8 @@ $messages['mk'] = array(
 	'semanticmaps-kml-title' => 'Стандарден наслов за резултатите',
 	'semanticmaps-kml-linkabsolute' => 'Дали врските да бидат апсолутни',
 	'semanticmaps-kml-pagelinktext' => 'Текстот на врските на страницата, каде $1 ќе се замени со насловот на страницата',
+	'semanticmaps-shapes-improperformat' => 'Несоодветно форматирање на $1. Погледајте во документацијата како треба да се форматира.',
+	'semanticmaps-shapes-missingshape' => 'Не пронајдов облици за $1. Погледајте во документацијата кои облици ви се на располагање.',
 );
 
 /** Malayalam (മലയാളം)
@@ -926,7 +989,7 @@ $messages['mt'] = array(
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
-	'semanticmaps-desc' => 'Tilbyr muligheten til å se på og endre koordinatdata lagret ved hjelp av Semantic MediaWiki-utvidelsen ([http://mapping.referata.com/wiki/Examples demo]).',
+	'semanticmaps-desc' => 'Tilbyr muligheten til å se på og endre koordinatdata lagret ved hjelp av Semantic MediaWiki-utvidelsen ([https://mapping.referata.com/wiki/Examples demo]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Verdien $1 er ikke en gyldig avstand.',
 	'semanticmaps-kml-link' => 'Vis KML-filen',
 	'semanticmaps-default-kml-pagelink' => 'Vis siden $1',
@@ -955,10 +1018,11 @@ $messages['nb'] = array(
 /** Dutch (Nederlands)
  * @author Jeroen De Dauw
  * @author SPQRobin
+ * @author Saruman
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'semanticmaps-desc' => 'Biedt de mogelijkheid om locatiegegevens die opgeslagen zijn in Semantic MediaWiki te bewerken en te bekijken',
+	'semanticmaps-desc' => 'Biedt de mogelijkheid om locatiegegevens die opgeslagen zijn in Semantic MediaWiki te bewerken en te bekijken ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps meer informatie])',
 	'semanticmaps-unrecognizeddistance' => 'De waarde "$1" is geen geldige afstand.',
 	'semanticmaps-kml-link' => 'KML-bestand bekijken',
 	'semanticmaps-default-kml-pagelink' => 'Pagina $1 bekijken',
@@ -975,14 +1039,16 @@ $messages['nl'] = array(
 	'semanticmaps-par-staticlocations' => 'Een lijst met aan de kaart toe te voegen locaties samen met de opgevraagde gegevens. Zoals bij display_points, kunt u een naam, beschrijving en icoon per locatie toevoegen door de tilde ("~") als scheidingsteken te gebruiken.',
 	'semanticmaps-par-forceshow' => 'De kaart zelfs weergeven als er geen weer te geven locaties zijn?',
 	'semanticmaps-par-showtitle' => 'Een naam weergeven in het gegevensvenster van de markering of niet. Dit uitschakelen is vaak handig als er een sjabloon wordt gebruikt om de inhoud van het gegevensvenster vorm te geven.',
-	'semanticmaps-par-hidenamespace' => 'De naamruimtenaam in het informatievenster van de marker weergeven of verbergen.',
+	'semanticmaps-par-hidenamespace' => 'De naamruimtenaam in het informatievenster van de marker weergeven',
 	'semanticmaps-par-centre' => 'Het centrum van de kaart. Als deze waarde niet wordt opgegeven, wordt automatisch een keuze gemaakt voor een centrum op basis van alle markeringen op de kaart.',
 	'semanticmaps-par-template' => 'Een te gebruiken sjabloon om de inhoud van het gegevensvenster op te maken.',
 	'semanticmaps-par-geocodecontrol' => 'Besturingselement voor geocodering weergeven.',
 	'semanticmaps-kml-text' => 'De tekst die gekoppeld is aan iedere pagina. Als er extra opgevraagde eigenschappen zijn, wordt deze tekst daardoor overschreven.',
 	'semanticmaps-kml-title' => 'De standaard titel voor resultaten',
-	'semanticmaps-kml-linkabsolute' => 'Moeten verwijzingen absoluut zijn of niet (d.w.z. relatief)',
+	'semanticmaps-kml-linkabsolute' => 'Moeten verwijzingen absoluut zijn (in tegenstelling tot relatief)',
 	'semanticmaps-kml-pagelinktext' => 'De tekst om te gebruiken voor de verwijzingen naar de pagina, waarin $1 vervangen wordt door de paginatitel',
+	'semanticmaps-shapes-improperformat' => 'Onjuiste opmaak van  $1. Raadpleeg de documentatie voor de juiste opmaak',
+	'semanticmaps-shapes-missingshape' => 'Geen vormen gevonden voor $1. Raadpleeg de documentatie voor beschikbare vormen',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
@@ -1004,7 +1070,7 @@ $messages['nn'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'semanticmaps-desc' => "Permet de veire e modificar las donadas de coordenadas estocadas a travèrs l'extension Semantic MediaWiki. [http://www.mediawiki.org/wiki/Extension:Semantic_Maps Documentacion]. [http://mapping.referata.com/wiki/Examples Demo]",
+	'semanticmaps-desc' => "Permet de veire e modificar las donadas de coordenadas estocadas a travèrs l'extension Semantic MediaWiki. [https://www.mediawiki.org/wiki/Extension:Semantic_Maps Documentacion]. [https://mapping.referata.com/wiki/Examples Demo]", # Fuzzy
 	'semanticmaps_lookupcoordinates' => 'Estimar las coordenadas',
 	'semanticmaps_enteraddresshere' => 'Picatz aicí l’adreça',
 );
@@ -1018,7 +1084,7 @@ $messages['oc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'semanticmaps-desc' => 'Umożliwia przeglądanie oraz edytowanie współrzędnych zapisanych przez rozszerzenie Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples dema]).',
+	'semanticmaps-desc' => 'Umożliwia przeglądanie oraz edytowanie współrzędnych zapisanych przez rozszerzenie Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples dema]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Wartość $1 nie jest poprawną odległością.',
 	'semanticmaps-kml-link' => 'Wyświetla plik KML',
 	'semanticmaps-default-kml-pagelink' => 'Pokaż stronę $1',
@@ -1040,7 +1106,7 @@ $messages['pl'] = array(
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'semanticmaps-desc' => "A dà la possibilità ëd vardé e modifiché ij dat ëd le coordinà memorisà con l'estension Semantic MediaWiki ([http://mapping.referata.com/wiki/Demo d'esempi]).",
+	'semanticmaps-desc' => "A dà la possibilità ëd vardé e modifiché ij dat ëd le coordinà memorisà con l'estension Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps për savèjne ëd pì...])",
 	'semanticmaps-unrecognizeddistance' => "Ël valor $1 a l'é pa na distansa bon-a.",
 	'semanticmaps-kml-link' => "Vëdde l'archivi KML",
 	'semanticmaps-default-kml-pagelink' => 'Lese la pàgina $1',
@@ -1057,7 +1123,7 @@ $messages['pms'] = array(
 	'semanticmaps-par-staticlocations' => 'Na lista ëd locassion da gionté a la carta ansema ai dat ciamà. Com con dispay_points, a peul gionté un tìtol, na descrission e na plancia për locassion an dovrand la tilde "~" com separator.',
 	'semanticmaps-par-forceshow' => 'Mostré la carta ëdcò quand a-i son pa ëd locassion da mostré?',
 	'semanticmaps-par-showtitle' => "Smon-e un tìtol ant la fnesta d'anformassion dël marcator opura nò. La disabilitassion ëd sòn a l'é soens ùtil quand as deuvra në stamp për formaté ël contnù dla fnesta d'anformassion.",
-	'semanticmaps-par-hidenamespace' => "Mostré o nò ël tìtol dlë spassi nominal ant la fnestra d'anformassion dël marcador.",
+	'semanticmaps-par-hidenamespace' => "Mostré ël tìtol dlë spassi nominal ant la fnestra d'anformassion dël marcador.",
 	'semanticmaps-par-centre' => "Ël sènter ëd la carta. Quand a l'é pa dàit, la carta a trovrà automaticament ël sènter otimal për smon-e tùit ij marcador an sla carta.",
 	'semanticmaps-par-template' => "Në stamp da dovré deje a forma ai contnù dla fnesta d'anformassion.",
 	'semanticmaps-par-geocodecontrol' => 'Smon-e ël contròl ëd geocodìfica.',
@@ -1083,7 +1149,7 @@ $messages['ps'] = array(
  * @author Malafaya
  */
 $messages['pt'] = array(
-	'semanticmaps-desc' => 'Permite ver e editar dados de coordenadas, armazenados através da extensão MediaWiki Semântico ([http://mapping.referata.com/wiki/Examples demonstração]).',
+	'semanticmaps-desc' => 'Permite ver e editar dados de coordenadas, armazenados através da extensão MediaWiki Semântico ([https://mapping.referata.com/wiki/Examples demonstração]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'O valor $1 não é uma distância válida.',
 	'semanticmaps-kml-link' => 'Ver o ficheiro KML',
 	'semanticmaps-default-kml-pagelink' => 'Ver a página $1',
@@ -1105,13 +1171,13 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
- * @author 555
  * @author Eduardo.mps
  * @author Giro720
  * @author Luckas Blade
+ * @author 555
  */
 $messages['pt-br'] = array(
-	'semanticmaps-desc' => 'Permite ver e editar dados de coordenadas armazenados através da extensão Semantic MediaWiki. ([http://mapping.referata.com/wiki/Examples exemplos]).',
+	'semanticmaps-desc' => 'Permite ver e editar dados de coordenadas armazenados através da extensão Semantic MediaWiki. ([https://mapping.referata.com/wiki/Examples exemplos]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'O valor $1 não é uma distância válida.',
 	'semanticmaps-kml-link' => 'Ver o arquivo KML',
 	'semanticmaps-default-kml-pagelink' => 'Ver a página $1',
@@ -1139,8 +1205,10 @@ $messages['pt-br'] = array(
 
 /** Romanian (română)
  * @author Firilacroco
+ * @author Minisarm
  */
 $messages['ro'] = array(
+	'semanticmaps-desc' => 'Permite vizualizarea și modificarea datelor despre coordonate stocate cu extensia Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps mai multe informații...]).',
 	'semanticmaps_enteraddresshere' => 'Introduceți adresa aici',
 );
 
@@ -1148,7 +1216,7 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
-	'semanticmaps-desc' => "Dèje l'abbilità a fà vedè e cangià le coordinate reggistrate cu l'estenzione Semandiche de MediaUicchi ([http://mapping.referata.com/wiki/Examples demo]).",
+	'semanticmaps-desc' => "Dèje l'abbilità a fà vedè e cangià le coordinate reggistrate cu l'estenzione Semandiche de MediaUicchi ([https://mapping.referata.com/wiki/Examples demo]).", # Fuzzy
 	'semanticmaps-default-kml-pagelink' => "Vide 'a pàgene $1",
 	'semanticmaps_lookupcoordinates' => 'Ingroce le coordinate',
 	'semanticmaps_enteraddresshere' => "Scaffe l'indirizze aqquà",
@@ -1163,7 +1231,7 @@ $messages['roa-tara'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
-	'semanticmaps-desc' => 'Обеспечивает возможность просмотра и редактирования координатных данных, хранящихся в семантическом расширении MediaWiki ([http://mapping.referata.com/wiki/Examples примеры]).',
+	'semanticmaps-desc' => 'Обеспечивает возможность просмотра и редактирования координатных данных, хранящихся в семантическом расширении MediaWiki ([https://mapping.referata.com/wiki/Examples примеры]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Значение $1 не является допустимым расстоянием.',
 	'semanticmaps-kml-link' => 'Просмотреть файл KML',
 	'semanticmaps-default-kml-pagelink' => 'Просмотреть страницу $1',
@@ -1192,7 +1260,7 @@ $messages['si'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
-	'semanticmaps-desc' => 'Poskytuje schopnosť zobrazovať a upravovať údaje súradníc uložené prostredníctvom rozšírenia Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples demo]).',
+	'semanticmaps-desc' => 'Poskytuje schopnosť zobrazovať a upravovať údaje súradníc uložené prostredníctvom rozšírenia Semantic MediaWiki ([https://mapping.referata.com/wiki/Examples demo]).', # Fuzzy
 	'semanticmaps_lookupcoordinates' => 'Vyhľadať súradnice',
 	'semanticmaps_enteraddresshere' => 'Sem zadajte emailovú adresu',
 );
@@ -1202,7 +1270,7 @@ $messages['sk'] = array(
  * @author Lesko987
  */
 $messages['sl'] = array(
-	'semanticmaps-desc' => 'Omogoča ogled in urejanje podatke o lokaciji, shranjene z razširitvijo Semantic MediaWiki ([http://mapping.referata.com/wiki/Examples Primeri]).',
+	'semanticmaps-desc' => 'Omogoča ogled in urejanje podatkov o lokaciji, shranjenih z razširitvijo Semantic MediaWiki ([https://www.semantic-mediawiki.org/wiki/Semantic_Maps več informacij ...]).',
 	'semanticmaps-unrecognizeddistance' => 'Vrednost $1 ni pravilna razdalja.',
 	'semanticmaps-kml-link' => 'Ogled datoteke KML',
 	'semanticmaps-default-kml-pagelink' => 'Poglej stran $1',
@@ -1250,13 +1318,14 @@ $messages['sr-el'] = array(
 
 /** Swedish (svenska)
  * @author Boivie
+ * @author Martinwiss
  * @author Najami
  * @author Per
  * @author Rotsee
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
-	'semanticmaps-desc' => 'Ger möjlighet att se och redigera koordinatdata som sparats med Semantic MediaWiki-utvidgningen ([http://mapping.referata.com/wiki/Examples Demo]).',
+	'semanticmaps-desc' => 'Ger möjlighet att se och redigera koordinatdata som sparats med Semantic MediaWiki-utvidgningen ([https://mapping.referata.com/wiki/Examples Demo]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Värdet $1 är inte ett giltigt avstånd.',
 	'semanticmaps-kml-link' => 'Visa KML-filen',
 	'semanticmaps-default-kml-pagelink' => 'Visa sida $1',
@@ -1270,18 +1339,28 @@ $messages['sv'] = array(
 	'semanticmaps-forminput-remove' => 'Ta bort',
 	'semanticmaps-forminput-add' => 'Lägg till',
 	'semanticmaps-forminput-locations' => 'Platser',
+	'semanticmaps-par-staticlocations' => 'En lista med platser som man kan placera på kartan tillsammans med efterfrågad data. Precis som för display_points, så kan du lägga till en titel, en beskrivning och en ikon för varje plats med hjälp av tilde "~" som avgränsare.',
 	'semanticmaps-par-forceshow' => 'Visa kartan även om det inte finns några platser att visa?',
+	'semanticmaps-par-showtitle' => 'Visa en titel i markörens informationsruta eller inte. Det är ofta lämpligt att inte använda denna funktion när en mall används för informationsrutans innehåll.',
+	'semanticmaps-par-hidenamespace' => 'Visa namnrymdens titel i markörens informationsruta eller inte.',
+	'semanticmaps-par-centre' => 'Kartans mitt. Om inte angiven så kommer kartan automatiskt att hitta markörernas mittpunkt.',
+	'semanticmaps-par-template' => 'En mall som ska användas för informationsrutorna.',
+	'semanticmaps-par-geocodecontrol' => 'Visa formulär för geokodning.',
+	'semanticmaps-kml-text' => 'Texten som hör ihop med varje sida. Om det finns efterfrågade egenskaper så tar de överhand.',
+	'semanticmaps-kml-title' => 'Förvald titel för resultaten',
+	'semanticmaps-kml-linkabsolute' => 'Ska länkar vara absoluta eller relativa',
+	'semanticmaps-kml-pagelinktext' => 'Texten som ska användas för länkar till sidan, där $1 kommer att bytas ut med sidtiteln',
 );
 
 /** Swahili (Kiswahili)
  * @author Lloffiwr
  */
 $messages['sw'] = array(
-	'semanticmaps-kml-link' => 'Tazama faili la KML',
-	'semanticmaps-default-kml-pagelink' => 'Tazama ukurasa $1',
-	'semanticmaps-loading-forminput' => 'Fomu ya kuingiza ramani inapakiwa...',
+	'semanticmaps-kml-link' => 'Tazama faili la KML', # Fuzzy
+	'semanticmaps-default-kml-pagelink' => 'Tazama ukurasa $1', # Fuzzy
+	'semanticmaps-loading-forminput' => 'Fomu ya kuingiza ramani inapakiwa...', # Fuzzy
 	'semanticmaps_enteraddresshere' => 'Ingiza anwani hapa',
-	'semanticmaps-updatemap' => 'Sasisha ramani',
+	'semanticmaps-updatemap' => 'Sasisha ramani', # Fuzzy
 	'semanticmaps-forminput-remove' => 'Ondoa',
 	'semanticmaps-forminput-add' => 'Ongeza',
 	'semanticmaps-forminput-locations' => 'Mahali',
@@ -1321,7 +1400,7 @@ $messages['tet'] = array(
  * @author AnakngAraw
  */
 $messages['tl'] = array(
-	'semanticmaps-desc' => 'Nagbibigay ng kakayahang matingnan at baguhin ang dato ng tugmaang pampook na nakaimbak sa pamamagitan ng dugtong ng Semantikong MediaWiki ([http://mapping.referata.com/wiki/Examples pagpapamalas]).',
+	'semanticmaps-desc' => 'Nagbibigay ng kakayahang matingnan at baguhin ang dato ng tugmaang pampook na nakaimbak sa pamamagitan ng dugtong ng Semantikong MediaWiki ([https://mapping.referata.com/wiki/Examples pagpapamalas]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Hindi isang tanggap na layo ang halagang $1.',
 	'semanticmaps-kml-link' => 'Tingnan ang talaksang KML',
 	'semanticmaps-kml' => 'KML',
@@ -1373,7 +1452,7 @@ $messages['ur'] = array(
  * @author Vinhtantran
  */
 $messages['vi'] = array(
-	'semanticmaps-desc' => 'Cung cấp khả năng xem và sửa đổi dữ liệu tọa độ được lưu bởi phần mở rộng MediaWiki Ngữ nghĩa ([http://mapping.referata.com/wiki/Examples?uselang=vi xem thử]).',
+	'semanticmaps-desc' => 'Cung cấp khả năng xem và sửa đổi dữ liệu tọa độ được lưu bởi phần mở rộng MediaWiki Ngữ nghĩa ([https://mapping.referata.com/wiki/Examples?uselang=vi xem thử]).', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => 'Giá trị $1 không phải là tầm hợp lệ.',
 	'semanticmaps-kml-link' => 'Xem tập tin KML',
 	'semanticmaps-default-kml-pagelink' => 'Xem trang $1',
@@ -1412,7 +1491,7 @@ $messages['yi'] = array(
  * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
-	'semanticmaps-desc' => '提供对采用Semantic MediaWiki扩展所存储坐标数据的查看和编辑能力（[http://mapping.referata.com/wiki/Examples 演示]）。',
+	'semanticmaps-desc' => '提供对采用Semantic MediaWiki扩展所存储坐标数据的查看和编辑能力（[https://mapping.referata.com/wiki/Examples 演示]）。', # Fuzzy
 	'semanticmaps-unrecognizeddistance' => '取值$1不是有效的距离。',
 	'semanticmaps-kml-link' => '查看KML文件',
 	'semanticmaps-default-kml-pagelink' => '检视页面 $1',
@@ -1440,13 +1519,14 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Gzdavidwong
+ * @author Justincheng12345
  * @author Mark85296341
  * @author Oapbtommy
  * @author Sheepy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
-	'semanticmaps-desc' => '提供對採用Semantic MediaWiki擴展所存儲坐標數據的查看和編輯能力（[http://mapping.referata.com/wiki/Examples 演示]）。',
+	'semanticmaps-desc' => '提供對採用Semantic MediaWiki擴展所存儲坐標數據的查看和編輯能力（[https://www.semantic-mediawiki.org/wiki/Semantic_Maps 更多資訊]）。',
 	'semanticmaps-unrecognizeddistance' => '取值$1不是有效的距離。',
 	'semanticmaps-kml-link' => '查看KML文件',
 	'semanticmaps-default-kml-pagelink' => '檢視頁面 $1',
@@ -1471,4 +1551,3 @@ $messages['zh-hant'] = array(
 	'semanticmaps-kml-linkabsolute' => '鏈接究竟應當是絕對地址還是相對地址',
 	'semanticmaps-kml-pagelinktext' => '用於那些指向該頁面的鏈接的文本；其中，頁面標題將取代$1',
 );
-

@@ -16,14 +16,23 @@ class SMQueryHandler {
 	protected $queryResult;
 	protected $outputmode;
 
-	protected $locations = false;
+	/**
+	 * @since 2.0
+	 *
+	 * @var array
+	 */
+	protected $geoShapes = array(
+		'lines' => array(),
+		'locations' => array(),
+		'polygons' => array()
+	);
 
 	/**
 	 * The template to use for the text, or false if there is none.
 	 *
 	 * @since 0.7.3
 	 *
-	 * @var false or string
+	 * @var string|boolean false
 	 */
 	protected $template = false;
 
@@ -224,36 +233,15 @@ class SMQueryHandler {
 		$this->pageLinkText = $text;
 	}
 
-	/**
-	 * Gets the query result as a list of locations.
-	 *
-	 * @since 0.7.3
-	 *
-	 * @return array of MapsLocation
-	 */
-	public function getLocations() {
-		if ( $this->locations === false ) {
-			$this->locations = $this->findLocations();
-		}
-
-		return $this->locations;
+	public function getShapes() {
+		$this->findShapes();
+		return $this->geoShapes;
 	}
 
-	/**
-	 * Gets the query result as a list of locations.
-	 *
-	 * @since 0.7.3
-	 *
-	 * @return array of MapsLocation
-	 */
-	protected function findLocations() {
-		$locations = array();
-
+	protected function findShapes() {
 		while ( ( $row = $this->queryResult->getNext() ) !== false ) {
-			$locations = array_merge( $locations, $this->handleResultRow( $row ) );
+			$this->handleResultRow( $row );
 		}
-
-		return $locations;
 	}
 
 	/**
@@ -285,6 +273,11 @@ class SMQueryHandler {
 					$title = $dataValue->getLongText( $this->outputmode, null );
 					$text = $dataValue->getLongText( $this->outputmode, smwfGetLinker() );
 				}
+				else if ( $dataValue->getTypeID() == '_gpo' ) {
+					$dataItem = $dataValue->getDataItem();
+					$polyHandler = new PolygonHandler ( $dataItem->getString() );
+					$this->geoShapes[ $polyHandler->getGeoType() ][] = $polyHandler->shapeFromText();
+				}
 				else if ( $dataValue->getTypeID() != '_geo' && $i != 0 ) {
 					$properties[] = $this->handleResultProperty( $dataValue, $printRequest );
 				}
@@ -307,7 +300,16 @@ class SMQueryHandler {
 
 		$icon = $this->getLocationIcon( $row );
 
-		return $this->buildLocationsList( $locations, Title::newFromText( $title ), $text, $icon, $properties );
+		$this->geoShapes['locations'] = array_merge(
+			$this->geoShapes['locations'],
+			$this->buildLocationsList(
+				$locations,
+				$text,
+				$icon,
+				$properties,
+				Title::newFromText( $title )
+			)
+		);
 	}
 
 	/**
@@ -425,29 +427,39 @@ class SMQueryHandler {
 	 *
 	 * @since 1.0
 	 *
-	 * @param array of MapsLocation $locations
-	 * @param string $title
+	 * @param MapsLocation[] $locations
 	 * @param string $text
 	 * @param string $icon
 	 * @param array $properties
+	 * @param Title|null $title
 	 *
-	 * @return array of MapsLocation
+	 * @return MapsLocation[]
 	 */
-	protected function buildLocationsList( array $locations, Title $title, $text, $icon, array $properties ) {
+	protected function buildLocationsList( array $locations, $text, $icon, array $properties, Title $title = null ) {
 		if ( $this->template ) {
 			global $wgParser;
-			$parser = version_compare( $GLOBALS['wgVersion'], '1.18', '<' ) ? $wgParser : clone $wgParser;
+			$parser = $wgParser;
 		}
 		else {
 			$text .= implode( '<br />', $properties );
 		}
 
-		$titleOutput = $this->hideNamespace ? $title->getText() : $title->getFullText();
+		if ( $title === null ) {
+			$titleOutput = '';
+		}
+		else {
+			$titleOutput = $this->hideNamespace ? $title->getText() : $title->getFullText();
+		}
 
 		foreach ( $locations as &$location ) {
 			if ( $this->template ) {
 				$segments = array_merge(
-					array( $this->template, 'title=' . $titleOutput, 'latitude=' . $location->getLatitude(), 'longitude=' . $location->getLongitude() ),
+					array(
+						$this->template,
+						'title=' . $titleOutput,
+						'latitude=' . $location->getLatitude(),
+						'longitude=' . $location->getLongitude()
+					),
 					$properties
 				);
 
